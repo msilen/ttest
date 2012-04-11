@@ -1,3 +1,5 @@
 Ttest::Application.routes.draw do
-  root :to => "home#index"
+  resources :lots
+
+  root :to => "lots#index"
 end

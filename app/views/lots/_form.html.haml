@@ -1,0 +1,12 @@
+= form_for @lot, :html => { :class => 'form-horizontal' } do |f|
+  .control-group
+    = f.label :endtime, :class => 'control-label'
+    .controls
+      = f.datetime_select :endtime, :class => 'datetime_select'
+  .control-group
+    = f.label :status, :class => 'control-label'
+    .controls
+      = f.check_box :status, :class => 'check_box'
+  .form-actions
+    = f.submit nil, :class => 'btn btn-primary'
+    = link_to t('.cancel', :default => t("helpers.links.cancel")), lots_path, :class => 'btn'
